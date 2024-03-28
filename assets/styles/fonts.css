@@ -38,15 +38,5 @@
   font-family: "InterThin";
   src: url("./fonts/Inter-Thin.ttf") format("truetype");
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  font-family: "TenorSans", sans-serif;
-}
 
-h1, h2, h3, h4, button {
-  font-family: "InterSemiBold", sans-serif;
-}
-
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=fonts.css.map */

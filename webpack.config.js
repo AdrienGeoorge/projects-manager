@@ -22,6 +22,13 @@ Encore
      */
     .addEntry('app', './assets/app.js')
 
+    .copyFiles({
+        from: './assets/images',
+
+        // optional target path, relative to the output dir
+        to: 'images/[path][name].[ext]',
+    })
+
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 
@@ -54,6 +61,7 @@ Encore
     })
 
     // enables Sass/SCSS support
+    .enablePostCssLoader()
     .enableSassLoader()
 
     // uncomment if you use TypeScript
