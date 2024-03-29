@@ -1,49 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}{{ app_name }} : Inscription{% endblock %}
 
 {% block body %}
-    {{ form_start(registrationForm, {'attr': {
-        'class': 'min-h-screen bg-body text-gray-900 flex justify-center sm:items-center
-                dark:bg-body-dark dark:text-white'
-    }}) }}
-    <div class="max-w-screen-xl m-0 sm:m-10 bg-box shadow sm:rounded-3xl overflow-hidden flex justify-center flex-1
+    <div class="bg-box lg:bg-body dark:bg-box-dark dark:lg:bg-body-dark flex items-center justify-center h-full">
+        {{ form_start(registrationForm, {'attr': {
+            'class': 'text-gray-900 flex justify-center sm:items-center
+                dark:bg-body-dark dark:text-white w-full lg:w-10/12 xl:w-9/12'
+        }}) }}
+        <div class="w-full max-w-screen-lg m-0 lg:m-10 lg:h-auto bg-box lg:shadow lg:rounded-5xl overflow-hidden flex justify-center lg:flex-1 flex-none
                    dark:bg-box-dark">
-        <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-            <div>
-                <div class="bg-logo-dark dark:bg-logo-white w-48 h-16 mx-auto bg-cover bg-no-repeat bg-center"></div>
-            </div>
-            <div class="mt-6 flex flex-col items-center">
-                <h1 class="xl:text-xl text-center">
-                    Créez votre compte {{ app_name }}
-                </h1>
-                <div class="w-full flex-1 mt-5">
-                    {% if not registrationForm.vars.valid %}
-                        <div class="relative block w-full p-4 mb-4 text-base leading-5 text-white bg-red-400 rounded-lg opacity-100 font-regular">
-                            <ul>
-                                {# Loop through every form item #}
-                                {% for child in registrationForm.children %}
-                                    {# Display the errors of the form item #}
-                                    {% for error in child.vars.errors %}
-                                        <li>{{ error.message }}</li>
+            <div class="lg:w-3/6 xl:w-6/12 p-6 sm:px-8 lg:py-5 flex lg:flex-none items-center">
+                <div class="flex flex-col px-10">
+                    <h1 class="mt-12 mb-5 text-xl font-poppins-semi-bold">
+                        Bienvenue sur <span class="text-amber-400">{{ app_name }}</span>
+                    </h1>
+                    <h1 class="text-3xl font-playfair">
+                        Créez votre compte
+                    </h1>
+                    <div class="w-full flex-1 mt-5">
+                        {% if not registrationForm.vars.valid %}
+                            <div class="relative block w-full py-4 px-6 mb-4 text-base leading-5 text-white bg-red-400 rounded-full opacity-100 font-regular">
+                                <ul>
+                                    {% for child in registrationForm.children %}
+                                        {% for error in child.vars.errors %}
+                                            <li>{{ error.message }}</li>
+                                        {% endfor %}
                                     {% endfor %}
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-                    <div class="mx-auto max-w-xs">
-                        {{ form_widget(registrationForm.firstname) }}
-                        {{ form_widget(registrationForm.lastname) }}
-                        {{ form_widget(registrationForm.email) }}
-                        {{ form_widget(registrationForm.plainPassword) }}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <div>{{ form_widget(registrationForm.firstname) }}</div>
+                        <div>{{ form_widget(registrationForm.lastname) }}</div>
+                        <div>{{ form_widget(registrationForm.email) }}</div>
+                        <div>{{ form_widget(registrationForm.plainPassword) }}</div>
                         <button
-                                class="mt-5 tracking-wide bg-indigo-500 text-gray-100 w-full py-4 rounded-lg
+                                class="mt-5 tracking-wide bg-indigo-500 text-gray-100 w-full py-4 rounded-full
                                     flex items-center justify-center hover:bg-indigo-700
                                     transition-all duration-300 ease-in-out
                                     focus:shadow-outline focus:outline-none">
                             S'inscrire
                         </button>
-                        <p class="mt-6 text-sm text-gray-600 text-center dark:text-gray-200">
+                        <p class="mt-6 mb-10 text-sm text-gray-600 text-center dark:text-gray-200">
                             Vous avez déjà un compte? Connectez-vous
                             <a href="{{ path('auth_login') }}" class="border-b border-gray-500 border-dotted">
                                 en cliquant ici
@@ -52,12 +50,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex-1 text-center hidden lg:flex">
-            <div class="w-full bg-cover bg-center bg-no-repeat"
-                 style="background-image: url({{ asset('build/images/index.png') }});">
+            <div class="flex-1 text-center hidden lg:flex">
+                <div class="w-full bg-contain bg-center bg-no-repeat mr-14"
+                     style="background-image: url({{ asset('build/images/index.png') }});">
+                </div>
             </div>
         </div>
+        {{ form_end(registrationForm) }}
     </div>
-    {{ form_end(registrationForm) }}
 {% endblock %}

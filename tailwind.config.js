@@ -13,6 +13,19 @@ module.exports = {
         'logo-dark': "url('/assets/images/logo.svg')",
         'logo-white': "url('/assets/images/logo-white.svg')",
       }),
+      boxShadow: (theme) => ({
+        'box-header-shadow': '-7px 7px 0 5pt'
+      }),
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'poppins-semi-bold': ['PoppinsSemiBold', 'sans-serif'],
+        'tenor': ['TenorSans', 'sans-serif'],
+        'playfair': ['Playfir', 'serif']
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem'
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -23,6 +36,10 @@ module.exports = {
         box: {
           DEFAULT: '#fff',
           dark: '#3b435cc2'
+        },
+        shadow: {
+          DEFAULT: '#fff',
+          dark: '#363d54'
         }
       },
     },

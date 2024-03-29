@@ -20,32 +20,32 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('firstname', TextType::class, [
                 'attr' => [
-                    'class' => 'w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200
-                                  placeholder-gray-400 text-sm
-                                  focus:outline-none focus:border-gray-400 focus:bg-white
-                                  dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
-                                  dark:placeholder-gray-300',
+                    'class' => 'w-full px-8 py-4 rounded-2xl font-medium bg-gray-100 border border-gray-200
+                              placeholder-gray-400 text-sm
+                              focus:outline-none focus:border-gray-400 focus:bg-white
+                              dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
+                              dark:placeholder-gray-300',
                     'placeholder' => 'Prénom',
                     'maxlength' => 25
                 ]
             ])
             ->add('lastname', TextType::class, [
                 'attr' => [
-                    'class' => 'w-full px-8 py-4 mt-3 rounded-lg font-medium bg-gray-100 border border-gray-200
-                                  placeholder-gray-400 text-sm
-                                  focus:outline-none focus:border-gray-400 focus:bg-white
-                                  dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
-                                  dark:placeholder-gray-300',
+                    'class' => 'w-full px-8 py-4 rounded-2xl font-medium bg-gray-100 border border-gray-200
+                              placeholder-gray-400 text-sm
+                              focus:outline-none focus:border-gray-400 focus:bg-white mt-3
+                              dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
+                              dark:placeholder-gray-300',
                     'placeholder' => 'Nom de famille'
                 ]
             ])
             ->add('email', TextType::class, [
                 'attr' => [
-                    'class' => 'w-full px-8 py-4 mt-3 rounded-lg font-medium bg-gray-100 border border-gray-200
-                                  placeholder-gray-400 text-sm
-                                  focus:outline-none focus:border-gray-400 focus:bg-white
-                                  dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
-                                  dark:placeholder-gray-300',
+                    'class' => 'w-full px-8 py-4 rounded-2xl font-medium bg-gray-100 border border-gray-200
+                              placeholder-gray-400 text-sm
+                              focus:outline-none focus:border-gray-400 focus:bg-white mt-3
+                              dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
+                              dark:placeholder-gray-300',
                     'placeholder' => 'Adresse mail'
                 ]
             ])
@@ -54,11 +54,11 @@ class RegistrationFormType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'new-password',
                     'placeholder' => 'Mot de passe',
-                    'class' => 'w-full px-8 py-4 mt-3 rounded-lg font-medium bg-gray-100 border border-gray-200
-                                  placeholder-gray-400 text-sm
-                                  focus:outline-none focus:border-gray-400 focus:bg-white
-                                  dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
-                                  dark:placeholder-gray-300'
+                    'class' => 'w-full px-8 py-4 rounded-2xl font-medium bg-gray-100 border border-gray-200
+                              placeholder-gray-400 text-sm
+                              focus:outline-none focus:border-gray-400 focus:bg-white mt-3
+                              dark:bg-transparent dark:border-gray-300 dark:focus:bg-transparent
+                              dark:placeholder-gray-300'
                 ],
                 'label' => 'Mot de passe',
                 'constraints' => [
