@@ -19,11 +19,21 @@
 }
 
 @font-face {
-    font-family: "PoppinsBold";
-    src: url("./fonts/Poppins-Bold.ttf") format("truetype");
+    font-family: "Playfair";
+    src: url("./fonts/Playfair.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Playfair";
-    src: url("./fonts/Playfair.ttf") format("truetype");
+    font-family: "RobotoThin";
+    src: url("./fonts/Roboto-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("./fonts/Roboto-Medium.ttf") format("truetype");
 }

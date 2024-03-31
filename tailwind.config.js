@@ -17,10 +17,13 @@ module.exports = {
         'box-header-shadow': '-7px 7px 0 5pt'
       }),
       fontFamily: {
+        'playfair': ['Playfir', 'serif'],
+        'tenor': ['TenorSans', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'poppins-semi-bold': ['PoppinsSemiBold', 'sans-serif'],
-        'tenor': ['TenorSans', 'sans-serif'],
-        'playfair': ['Playfir', 'serif']
+        'roboto-thin': ['RobotoThin', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'roboto-medium': ['RobotoMedium', 'sans-serif']
       },
       borderRadius: {
         '4xl': '2rem',
@@ -29,13 +32,21 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        body: {
+        'body-index': {
           DEFAULT: colors.gray["100"],
-          dark: '#212536fa'
+          dark: '#212536'
         },
-        box: {
+        'box-index': {
           DEFAULT: '#fff',
           dark: '#3b435cc2'
+        },
+        body: {
+          DEFAULT: '#fff',
+          dark: 'rgb(44,47,68)'
+        },
+        box: {
+          DEFAULT: colors.gray["100"],
+          dark: '#212536'
         },
         shadow: {
           DEFAULT: '#fff',

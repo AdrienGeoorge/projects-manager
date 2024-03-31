@@ -3,13 +3,13 @@
 {% block title %}{{ app_name }} : Inscription{% endblock %}
 
 {% block body %}
-    <div class="bg-box lg:bg-body dark:bg-box-dark dark:lg:bg-body-dark flex items-center justify-center h-full">
+    <div class="lg:bg-body-index dark:bg-body-index-dark flex items-center justify-center h-full">
         {{ form_start(registrationForm, {'attr': {
             'class': 'text-gray-900 flex justify-center sm:items-center
-                dark:bg-body-dark dark:text-white w-full lg:w-10/12 xl:w-9/12'
+                dark:text-white w-full lg:w-10/12 xl:w-9/12'
         }}) }}
-        <div class="w-full max-w-screen-lg m-0 lg:m-10 lg:h-auto bg-box lg:shadow lg:rounded-5xl overflow-hidden flex justify-center lg:flex-1 flex-none
-                   dark:bg-box-dark">
+        <div class="w-full max-w-screen-lg m-0 lg:m-10 lg:h-auto lg:shadow lg:rounded-5xl overflow-hidden flex justify-center lg:flex-1 flex-none
+                   lg:bg-box-index dark:lg:bg-box-index-dark">
             <div class="lg:w-3/6 xl:w-6/12 p-6 sm:px-8 lg:py-5 flex lg:flex-none items-center">
                 <div class="flex flex-col px-10">
                     <h1 class="mt-12 mb-5 text-xl font-poppins-semi-bold">
