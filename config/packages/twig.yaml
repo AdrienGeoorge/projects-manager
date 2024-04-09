@@ -1,7 +1,7 @@
 twig:
     file_name_pattern: '*.twig'
     globals:
-        app_name: 'Gestionar'
+        app_name: 'NexusWeb'
 
 when@test:
     twig:

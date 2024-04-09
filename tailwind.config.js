@@ -32,25 +32,21 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'body-index': {
+        body: {
+          DEFAULT: '#fff',
+          dark: '#2C2F44FF'
+        },
+        'login-body': {
           DEFAULT: colors.gray["100"],
           dark: '#212536'
         },
-        'box-index': {
+        'login-box': {
           DEFAULT: '#fff',
           dark: '#3b435cc2'
         },
-        body: {
-          DEFAULT: '#fff',
-          dark: 'rgb(44,47,68)'
-        },
-        box: {
-          DEFAULT: colors.gray["100"],
+        'left-nav-border': {
+          DEFAULT: '#E0E0E0',
           dark: '#212536'
-        },
-        shadow: {
-          DEFAULT: '#fff',
-          dark: '#363d54'
         }
       },
     },

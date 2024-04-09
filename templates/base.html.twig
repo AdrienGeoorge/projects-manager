@@ -15,11 +15,13 @@
 </head>
 <body class="bg-body dark:bg-body-dark dark:text-white" hx-boost="true">
 {% block body %}
-    <div class="p-5 flex gap-4">
-        <div id="nav" class="w-3/12">
-            <h1 class="mb-5 text-2xl font-poppins-semi-bold text-amber-400">{{ app_name }}</h1>
-            <div class="text-3xl font-roboto-medium">Bonjour {{ app.user.firstname|capitalize }},</div>
-            <div class="text-2xl font-roboto">It's time to work & be productive...</div>
+    <div class="flex gap-4 h-full">
+        <div id="nav" class="w-2/12 p-5 border-left-nav dark:border-left-nav-dark border-r-2">
+            <h1 class="mb-5 text-2xl font-poppins-semi-bold">{{ app_name }}</h1>
+
+            {% if app.user %}
+                <a href="{{ path('auth_logout') }}">Déconnexion</a>
+            {% endif %}
         </div>
         <div id="content-and-header" class="flex-1">
             <div id="header"></div>
