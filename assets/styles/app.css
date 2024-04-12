@@ -38,9 +38,34 @@ html, body {
   width: 100%;
   font-family: "TenorSans", sans-serif;
 }
-
-button {
+html button, body button {
   font-family: sans-serif;
+}
+html #nav::-webkit-scrollbar, body #nav::-webkit-scrollbar {
+  display: none;
+}
+html #nav .navigation-links .category-title, body #nav .navigation-links .category-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+html #nav .navigation-links .navigation-link, body #nav .navigation-links .navigation-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+  align-items: center;
+  padding: 0 1em;
+  text-decoration: unset;
+  margin-bottom: 1em;
+}
+html #nav .navigation-links .navigation-link .link-icon, body #nav .navigation-links .navigation-link .link-icon {
+  flex: 1;
+  position: relative;
+}
+html #nav .navigation-links .navigation-link .link-title, body #nav .navigation-links .navigation-link .link-title {
+  font-size: 15px;
+  font-weight: normal;
+  flex: 10;
 }
 
 /*# sourceMappingURL=app.css.map */

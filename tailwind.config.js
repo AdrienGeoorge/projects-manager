@@ -9,6 +9,13 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
+      screens: {
+        '2xl': {'min': '1535px'},
+        'xl': {'min': '1279px'},
+        'lg': {'min': '1023px'},
+        'md': {'min': '767px'},
+        'sm': {'min': '639px'}
+      },
       backgroundImage: (theme) => ({
         'logo-dark': "url('/assets/images/logo.svg')",
         'logo-white': "url('/assets/images/logo-white.svg')",
@@ -16,15 +23,6 @@ module.exports = {
       boxShadow: (theme) => ({
         'box-header-shadow': '-7px 7px 0 5pt'
       }),
-      fontFamily: {
-        'playfair': ['Playfir', 'serif'],
-        'tenor': ['TenorSans', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'poppins-semi-bold': ['PoppinsSemiBold', 'sans-serif'],
-        'roboto-thin': ['RobotoThin', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif'],
-        'roboto-medium': ['RobotoMedium', 'sans-serif']
-      },
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
@@ -48,6 +46,15 @@ module.exports = {
           DEFAULT: '#E0E0E0',
           dark: '#212536'
         }
+      },
+      fontFamily: {
+        'playfair': ['Playfir', 'serif'],
+        'tenor': ['TenorSans', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'poppins-semi-bold': ['PoppinsSemiBold', 'sans-serif'],
+        'roboto-thin': ['RobotoThin', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'roboto-medium': ['RobotoMedium', 'sans-serif']
       },
     },
   },
