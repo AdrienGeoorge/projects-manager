@@ -26,7 +26,14 @@ Encore
         from: './assets/images',
 
         // optional target path, relative to the output dir
-        to: 'images/[path][name].[ext]',
+        to: 'images/[path][name].[hash:8].[ext]',
+    })
+
+    .copyFiles({
+        from: './assets/icons',
+
+        // optional target path, relative to the output dir
+        to: 'icons/[path][name].[hash:8].[ext]',
     })
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.

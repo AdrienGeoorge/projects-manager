@@ -3,6 +3,10 @@
   src: url("./fonts/TenorSans-Regular.ttf") format("truetype");
 }
 @font-face {
+  font-family: "PoppinsLight";
+  src: url("./fonts/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
   font-family: "Poppins";
   src: url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
@@ -13,10 +17,6 @@
 @font-face {
   font-family: "PoppinsSemiBold";
   src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Playfair";
-  src: url("./fonts/Playfair.ttf") format("truetype");
 }
 @font-face {
   font-family: "RobotoThin";
@@ -41,9 +41,6 @@ html, body {
 html button, body button {
   font-family: sans-serif;
 }
-html #nav::-webkit-scrollbar, body #nav::-webkit-scrollbar {
-  display: none;
-}
 html #nav .navigation-links .category-title, body #nav .navigation-links .category-title {
   font-size: 17px;
   font-weight: 600;
@@ -66,6 +63,18 @@ html #nav .navigation-links .navigation-link .link-title, body #nav .navigation-
   font-size: 15px;
   font-weight: normal;
   flex: 10;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

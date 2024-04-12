@@ -1,8 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{{ parent() }} - Actualités{% endblock %}
 
 {% block content %}
     {{ parent() }}
-    Hello World!
+    <div class="flex flex-col gap-4">
+        <div class="titles ml-11 mt-2">
+            <div class="text-3xl font-poppins-medium">ÉVÉNEMENTS</div>
+            <div class="text-lg font-poppins-light leading-5">Retrouvez tous nos événements en cours et passés</div>
+        </div>
+        <div class="events-slider px-10 relative">
+            <img src="{{ asset('build/icons/left.svg') }}" class="slider-left cursor-pointer absolute top-24-1/2 left-0"
+                 alt="Left">
+            <img src="{{ asset('build/icons/right.svg') }}"
+                 class="slider-right cursor-pointer absolute top-24-1/2 right-0" alt="Right">
+            <div class="events-list flex gap-4 overflow-x-scroll overflow-y-hidden no-scrollbar">
+                {% for article in articles %}
+                    <a href="#" class="event flex-none w-64">
+                        <div class="bg-box-new dark:bg-box-new-dark rounded-4xl p-2">
+                            <div class="event-header w-full h-60 rounded-3xl bg-cover"
+                                 style="background-image:url({{ asset(article_directory  ~ article.header) }})"></div>
+                        </div>
+                        <div class="mt-3 px-3">
+                            <div class="font-poppins-medium">{{ article.title }}</div>
+                            <div class="font-roboto-thin text-sm">{{ article.description }}</div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="titles ml-11 mt-2">
+            <div class="text-3xl font-poppins-medium">NOUVEAUTÉS</div>
+            <div class="text-lg font-poppins-light leading-5">Retrouvez toutes nos nouveautés ici</div>
+        </div>
+        <div class="events-slider px-10 relative">
+            <img src="{{ asset('build/icons/left.svg') }}" class="slider-left cursor-pointer absolute top-24-1/2 left-0"
+                 alt="Left">
+            <img src="{{ asset('build/icons/right.svg') }}"
+                 class="slider-right cursor-pointer absolute top-24-1/2 right-0" alt="Right">
+            <div class="events-list flex gap-4 overflow-x-scroll overflow-y-hidden no-scrollbar">
+                {% for article in articles %}
+                    <a href="#" class="event flex-none w-64">
+                        <div class="bg-box-new dark:bg-box-new-dark rounded-4xl p-2">
+                            <div class="event-header w-full h-60 rounded-3xl bg-cover"
+                                 style="background-image:url({{ asset(article_directory  ~ article.header) }})"></div>
+                        </div>
+                        <div class="mt-3 px-3">
+                            <div class="font-poppins-medium">{{ article.title }}</div>
+                            <div class="font-roboto-thin text-sm">{{ article.description }}</div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

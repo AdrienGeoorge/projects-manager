@@ -16,10 +16,10 @@ module.exports = {
         'md': {'min': '767px'},
         'sm': {'min': '639px'}
       },
-      backgroundImage: (theme) => ({
-        'logo-dark': "url('/assets/images/logo.svg')",
-        'logo-white': "url('/assets/images/logo-white.svg')",
-      }),
+      // backgroundImage: (theme) => ({
+      //   'logo-dark': "url('/assets/images/logo.svg')",
+      //   'logo-white': "url('/assets/images/logo-white.svg')",
+      // }),
       boxShadow: (theme) => ({
         'box-header-shadow': '-7px 7px 0 5pt'
       }),
@@ -27,13 +27,15 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem'
       },
+      margin: {
+        11: '3rem'
+      },
+      inset: {
+        '24-1/2': '6.5rem'
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        body: {
-          DEFAULT: '#fff',
-          dark: '#2C2F44FF'
-        },
         'login-body': {
           DEFAULT: colors.gray["100"],
           dark: '#212536'
@@ -42,15 +44,28 @@ module.exports = {
           DEFAULT: '#fff',
           dark: '#3b435cc2'
         },
+        body: {
+          DEFAULT: '#f3f3f3',
+          dark: '#2C2F44FF'
+        },
+        nav: {
+          DEFAULT: '#fff',
+          dark: '#343850'
+        },
         'left-nav-border': {
           DEFAULT: '#E0E0E0',
           dark: '#212536'
+        },
+        'box-new': {
+          DEFAULT: '#fff',
+          dark: '#363850'
         }
       },
       fontFamily: {
-        'playfair': ['Playfir', 'serif'],
         'tenor': ['TenorSans', 'sans-serif'],
+        'poppins-light': ['PoppinsLight', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
+        'poppins-medium': ['PoppinsMedium', 'sans-serif'],
         'poppins-semi-bold': ['PoppinsSemiBold', 'sans-serif'],
         'roboto-thin': ['RobotoThin', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],

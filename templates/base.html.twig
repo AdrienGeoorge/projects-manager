@@ -15,7 +15,8 @@
 </head>
 <body class="bg-body dark:bg-body-dark dark:text-white" hx-boost="true">
 {% block body %}
-    <div id="nav" class="border-left-nav dark:border-left-nav-dark overflow-y-scroll w-screen xl:w-64 h-full fixed top-0 left-0 hidden xl:block border-r-0 xl:border-r p-6">
+    <div id="nav" class="bg-nav dark:bg-nav-dark border-left-nav-border dark:border-left-nav-border-dark overflow-y-scroll p-6
+                        w-screen xl:w-64 h-full fixed top-0 left-0 hidden xl:block border-r-0 xl:border-r no-scrollbar">
         <h1 class="mb-5 text-2xl font-poppins-semi-bold">{{ app_name }}</h1>
 
         <div class="navigation-links font-roboto mt-4 py-0">
@@ -150,7 +151,7 @@
             </div>
         </div>
     </div>
-    <div id="content-and-header" class="p-5 ml-0 xl:ml-64">
+    <div id="content-and-header" class="py-5 px-10 ml-0 xl:ml-64">
         <div id="header"></div>
         <div id="content" class="bg-box dark:bg-box-dark rounded-4xl p-2">
             {% block content %}{% endblock %}
