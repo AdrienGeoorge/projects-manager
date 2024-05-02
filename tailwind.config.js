@@ -6,7 +6,7 @@ module.exports = {
     "./assets/**/*.js",
     "./templates/**/*.html.twig",
   ],
-  darkMode: 'media',
+  darkMode: 'selector',
   theme: {
     extend: {
       screens: {
@@ -33,6 +33,10 @@ module.exports = {
       inset: {
         '24-1/2': '6.5rem'
       },
+      width: {
+        98: '25rem',
+        100: '26rem'
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -52,11 +56,11 @@ module.exports = {
           DEFAULT: '#fff',
           dark: '#343850'
         },
-        'left-nav-border': {
+        'nav-border': {
           DEFAULT: '#E0E0E0',
           dark: '#212536'
         },
-        'box-new': {
+        box: {
           DEFAULT: '#fff',
           dark: '#363850'
         }

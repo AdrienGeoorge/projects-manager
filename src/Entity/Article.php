@@ -17,7 +17,7 @@ class Article
     #[ORM\Column(length: 85)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 150, nullable: true)]
+    #[ORM\Column(length: 100, nullable: true)]
     private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT)]

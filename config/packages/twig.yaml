@@ -3,6 +3,7 @@ twig:
     globals:
         app_name: 'NexusWeb'
         article_directory: 'uploads/article/'
+        job_directory: 'uploads/job/'
 
 when@test:
     twig:
